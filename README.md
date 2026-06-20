@@ -131,11 +131,18 @@ hugo new content/posts/2026/06-20-my-post.md
 推送到 `main` 分支后，GitHub Actions 会在 `ubuntu-22.04` 上执行：
 
 1. 检出仓库。
-2. 安装 Go 与 Hugo Extended。
-3. 执行 `hugo --minify`。
-4. 将 `public/` 部署到 GitHub Pages。
+2. 调用 `actions/configure-pages` 初始化 GitHub Pages 工作流上下文。
+3. 安装 Go 与 Hugo Extended。
+4. 执行 `hugo --minify`。
+5. 将 `public/` 部署到 GitHub Pages。
 
-仓库已包含 [static/CNAME](/root/Blog/static/CNAME) 作为占位域名文件。启用自定义域名时，直接把其中的 `example.com` 替换成真实域名并提交；如果暂时不用自定义域名，可以在部署前删除该文件。
+首次启用时，还需要到仓库设置页将 Pages 的构建来源切换为 GitHub Actions：
+
+1. 打开 `Settings -> Pages`。
+2. 在 `Build and deployment` 下把 `Source` 设为 `GitHub Actions`。
+3. 重新运行 [deploy.yml](/root/Blog/.github/workflows/deploy.yml) 工作流。
+
+仓库已包含 [static/CNAME](/root/Blog/static/CNAME) 作为当前自定义域名文件。当前配置的域名是 `blog.lwd123.cc`；如果后续迁移域名，直接修改该文件并同步更新 [config.yaml](/root/Blog/config.yaml#L1) 即可。
 
 ## 安全与合规
 
