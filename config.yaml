@@ -1,6 +1,6 @@
 baseURL: https://blog.lwd123.cc/
 defaultContentLanguageInSubdir: false
-title: Blog
+title: lwd的调试笔记
 defaultContentLanguage: zh
 languages:
   zh:
@@ -41,8 +41,8 @@ menu:
 
 params:
   env: production
-  description: 一个基于 Hugo Module 构建的个人博客原型。
-  author: Blog Owner
+  description: 做一些有趣的事情吧！
+  author: weidingliu
   defaultTheme: auto
   ShowReadingTime: true
   ShowShareButtons: false
@@ -56,14 +56,13 @@ params:
     - posts
   socialIcons:
     - name: github
-      url: https://github.com/example
+      url: https://github.com/weidingliu
     - name: rss
       url: /index.xml
   homeInfoParams:
-    Title: 个人博客原型
+    Title: lwd的调试笔记
     Content: |
-      这个仓库使用 Hugo + PaperMod + GitHub Pages 组织内容、样式与自动化部署。
-      内容与主题配置分离，方便长期维护和迁移。
+      做一些有趣的事情吧！
   codeLicense:
     name: MIT
     url: /LICENSE
