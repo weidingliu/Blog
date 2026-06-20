@@ -1,5 +1,6 @@
 public/
 _vendor/
+.cache/
 .env
 .hugo_build.lock
 .DS_Store

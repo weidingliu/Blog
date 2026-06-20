@@ -140,25 +140,25 @@ hugo new content/posts/2026/06-20-my-post.md
 
 1. 打开 `Settings -> Pages`。
 2. 在 `Build and deployment` 下把 `Source` 设为 `GitHub Actions`。
-3. 重新运行 [deploy.yml](/root/Blog/.github/workflows/deploy.yml) 工作流。
+3. 重新运行 [deploy.yml](.github/workflows/deploy.yml) 工作流。
 
-仓库已包含 [static/CNAME](/root/Blog/static/CNAME) 作为当前自定义域名文件。当前配置的域名是 `blog.lwd123.cc`；如果后续迁移域名，直接修改该文件并同步更新 [config.yaml](/root/Blog/config.yaml#L1) 即可。
+仓库已包含 [static/CNAME](static/CNAME) 作为当前自定义域名文件。当前配置的域名是 `blog.lwd123.cc`；如果后续迁移域名，直接修改该文件并同步更新 [config.yaml](config.yaml) 即可。
 
 ## 安全与合规
 
 - 所有敏感信息仅通过环境变量注入，本地使用 `.env`，并提供 `.env.example` 模板。
 - 工作流使用固定的 `ubuntu-22.04`，权限限制为 Pages 发布所需最小集合。
 - 依赖版本通过 `go.sum` 锁定，并启用 Dependabot 进行定期检查。
-- 兼容支持 `_headers` 的平台时，可直接使用 [static/_headers](/root/Blog/static/_headers) 下发 HSTS、CSP、`X-Frame-Options`、`X-Content-Type-Options` 等安全头。
+- 兼容支持 `_headers` 的平台时，可直接使用 [static/_headers](static/_headers) 下发 HSTS、CSP、`X-Frame-Options`、`X-Content-Type-Options` 等安全头。
 - GitHub Pages 原生不支持自定义响应头；若生产环境必须强制 CSP/HSTS，建议在 CDN 或反向代理层补齐并先在预发布环境验证。
-- 自定义 404 页面位于 [layouts/404.html](/root/Blog/layouts/404.html)。
+- 自定义 404 页面位于 [layouts/404.html](layouts/404.html)。
 - 仓库层面无法直接开启 `main` 分支保护、PR Review、域名锁或账号 2FA，这些仍需在 Git 托管平台和域名注册商后台显式配置。
 
 ## 许可
 
-- 仓库中的代码、配置与脚本采用 [LICENSE](/root/Blog/LICENSE) 中声明的 MIT 许可证。
+- 仓库中的代码、配置与脚本采用 [LICENSE](LICENSE) 中声明的 MIT 许可证。
 - 博客文章内容默认采用 CC BY-SA 4.0；该声明会在 README 与文章页脚中同时展示。
-- 第三方组件与许可证说明见 [THIRD_PARTY_NOTICES.md](/root/Blog/THIRD_PARTY_NOTICES.md)，其中包含 Hugo 与 PaperMod 的上游许可证信息。
+- 第三方组件与许可证说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，其中包含 Hugo 与 PaperMod 的上游许可证信息。
 
 ## 迁移与复现
 
