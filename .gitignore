@@ -1,0 +1,8 @@
+public/
+_vendor/
+.env
+.hugo_build.lock
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

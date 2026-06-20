@@ -1,0 +1,5 @@
+.git/
+public/
+_vendor/
+.env
+.hugo_build.lock
