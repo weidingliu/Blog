@@ -1,0 +1,5 @@
+{{- if .IsPage -}}
+<div class="post-license-note">
+  <p>代码配置采用 <a href="{{ .Site.Params.codeLicense.url }}">{{ .Site.Params.codeLicense.name }}</a> 许可；文章内容采用 <a href="{{ .Site.Params.contentLicense.url }}" rel="license">{{ .Site.Params.contentLicense.name }}</a> 许可。</p>
+</div>
+{{- end -}}
