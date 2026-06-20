@@ -65,7 +65,7 @@ params:
       做一些有趣的事情吧！
 
       选择分类：
-      - [CPU](/categories/cpu/)
+      - [ARCH](/categories/arch/)
       - [FPGA](/categories/fpga/)
   codeLicense:
     name: MIT

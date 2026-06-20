@@ -6,7 +6,7 @@ tags:
   - hello
   - hugo
 categories:
-  - CPU
+  - ARCH
   - FPGA
 description: 第一篇示例文章，用于验证 Hugo Module、内容结构与静态资源规范。
 slug: hello-world

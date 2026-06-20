@@ -5,7 +5,7 @@ draft: true
 tags:
   - note
 categories:
-  - CPU
+  - ARCH
 description: ""
 ---
 
