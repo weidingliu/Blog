@@ -63,6 +63,10 @@ params:
     Title: lwd的调试笔记
     Content: |
       做一些有趣的事情吧！
+
+      选择分类：
+      - [CPU](/categories/cpu/)
+      - [FPGA](/categories/fpga/)
   codeLicense:
     name: MIT
     url: /LICENSE
