@@ -6,7 +6,8 @@ tags:
   - hello
   - hugo
 categories:
-  - notes
+  - CPU
+  - FPGA
 description: 第一篇示例文章，用于验证 Hugo Module、内容结构与静态资源规范。
 slug: hello-world
 ---
@@ -20,3 +21,5 @@ slug: hello-world
 - 正文使用 Markdown。
 - 统一通过 Front Matter 管理标题、日期、标签、草稿状态与描述。
 - 静态资源集中放在 `static/images/`，正文中使用相对路径引用。
+- 分类当前采用可扩展的 taxonomy 目录结构，例如 `content/categories/cpu/_index.md`。
+
