@@ -22,7 +22,7 @@ jobs:
       GIT_HTTP_VERSION: HTTP/1.1
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
