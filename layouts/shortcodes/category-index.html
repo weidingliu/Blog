@@ -1,0 +1,10 @@
+{{- $categories := .Site.Taxonomies.categories.ByCount -}}
+{{- if gt (len $categories) 0 -}}
+<ul>
+  {{- range $categories -}}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+  {{- end -}}
+</ul>
+{{- else -}}
+<p>当前还没有分类文章。</p>
+{{- end -}}

@@ -7,7 +7,6 @@ description: 按时间或分类浏览全部文章。
 
 ## 分类
 
-- [CPU](/categories/cpu/)
-- [FPGA](/categories/fpga/)
+{{< category-index >}}
 
-后续新增分类时，继续在 `content/categories/<slug>/_index.md` 下新增分类定义，并把链接补到这个页面即可。
+新增文章时，只需要在文章 Front Matter 的 `categories` 中填写分类名；文章会继续保存在 `content/posts/` 一处，同时自动出现在文章列表和对应分类页中。
